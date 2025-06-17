@@ -1,0 +1,241 @@
+/* 全局样式 */
+/* 清除所有元素的默认外边距和内边距，使用盒模型计算元素尺寸，设置全局字体 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+
+/* 定义全局变量，方便统一管理颜色 */
+:root {
+  --primary-color: #2874d6;     /* 主色调 */
+  --secondary-color: #5a71d7;   /* 辅助色*/
+  --bg-color: #fdf4e3;           /* 背景色 */
+  --text-color: #333;            /* 文本色 */
+  --light-gray: #85a9ce;         /* 浅灰色 */
+  --border-color: #f0f2aa;       /* 边框色 */
+}
+
+/* 设置页面主体的背景色、文字颜色和行高 */
+body {
+  background-color: rgb(94, 229, 245);
+  color: rgb(8, 0, 0);
+  line-height: 1.6;
+}
+
+/* 设置链接的颜色和去除下划线，添加颜色过渡效果 */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* 鼠标悬停在链接上时，改变链接颜色 */
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* 设置标题元素的颜色和底部外边距 */
+h1, h2, h3, h4 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* 设置段落元素的底部外边距 */
+p {
+  margin-bottom: 15px;
+}
+
+/* 定义按钮样式，设置背景色、文字颜色、边框、内边距、圆角和鼠标指针样式，添加背景色过渡效果 */
+.btn {
+  background-color: greenyellow;
+  color: blue;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* 鼠标悬停在按钮上时，改变按钮背景色 */
+.btn:hover {
+  background-color: #357abd;
+}
+
+/* 页眉布局：使用Flexbox */
+/* 设置页眉的背景色、内边距、阴影、固定位置和层级 */
+.header {
+  background-color: rgb(132, 215, 228);
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(71, 198, 245, 0.942);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* 设置页眉容器的最大宽度、居中显示、内边距和使用Flexbox布局 */
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 注释：使用Flexbox实现标题与导航的水平排列 */
+}
+
+/* 设置 logo 的字体大小、粗细和颜色 */
+.logo {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+/* 设置 logo 中特定部分的颜色和字体粗细 */
+.logo span {
+  color: var(--secondary-color);
+  font-weight: normal;
+}
+
+/* 设置导航栏的显示方式和去除列表样式 */
+.nav {
+  display: flex;
+  list-style: none;
+  /* 注释：Flexbox实现导航项水平排列 */
+}
+
+/* 设置导航项的左边外边距 */
+.nav li {
+  margin-left: 30px;
+}
+
+/* 设置导航链接的字体粗细、内边距、底部边框和过渡效果 */
+.nav a {
+  font-weight: 500;
+  padding: 5px 0;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+/* 设置当前激活的导航链接和鼠标悬停时的样式 */
+.nav a.active,
+.nav a:hover {
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+/* 主体内容区：使用Flexbox */
+/* 设置主体内容容器的最大宽度、居中显示、内边距和使用Flexbox布局 */
+.main-container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 0 20px;
+  display: flex;
+  gap: 30px;
+  /* 注释：Flexbox实现主内容与侧边栏并排 */
+}
+
+/* 主内容区 */
+/* 主内容区占2份宽度 */
+.main-content {
+  flex: 2; /* 主内容占2份 */
+}
+
+/* 卡片样式 */
+/* 设置卡片的背景色、圆角、内边距、阴影和底部外边距 */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+/* 侧边栏 */
+/* 侧边栏占1份宽度 */
+.sidebar {
+  flex: 1; /* 侧边栏占1份 */
+}
+
+/* 页脚布局 */
+/* 设置页脚的背景色、文字颜色、内边距和顶部外边距 */
+.footer {
+  background-color: #1ca7b6;
+  color: white;
+  padding: 30px 0;
+  margin-top: 50px;
+}
+
+/* 设置页脚容器的最大宽度、居中显示、内边距和使用Flexbox布局 */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* 注释：Flexbox实现页脚内容水平排列 */
+}
+
+/* 设置页脚链接的颜色、左边外边距和字体大小 */
+.footer-links a {
+  color: white;
+  margin-left: 15px;
+  font-size: 14px;
+}
+
+/* 鼠标悬停在页脚链接上时，改变链接颜色 */
+.footer-links a:hover {
+  color: var(--secondary-color);
+}
+
+/* 响应式设计 */
+/* 当屏幕宽度小于等于992px时，调整主体内容区为垂直排列 */
+@media (max-width: 992px) {
+  .main-container {
+    flex-direction: column;
+  }
+  
+  .main-content,
+  .sidebar {
+    flex: 1;
+  }
+}
+
+/* 当屏幕宽度小于等于768px时，调整页眉和页脚为垂直排列 */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .nav {
+    margin-top: 15px;
+  }
+  
+  .nav li {
+    margin: 0 15px;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .footer-links {
+    margin-top: 15px;
+  }
+}
+
+/* 当屏幕宽度小于等于576px时，调整导航栏为多行排列 */
+@media (max-width: 576px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav li {
+    margin: 5px 10px;
+  }
+}

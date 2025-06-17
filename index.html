@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- 设置字符编码 -->
+  <meta charset="UTF-8">
+  <!-- 设置页面在移动设备上的显示方式 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 设置页面标题 -->
+  <title>信若溪 - 首页</title>
+  <!-- 引入外部样式表 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 页眉区：使用header语义化标签 -->
+  <header class="header">
+    <div class="header-container">
+      <!-- 显示 logo -->
+      <div class="logo">信若溪 <span>个人网站</span></div>
+      <!-- 导航栏 -->
+      <ul class="nav">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="resume.html">个人简历</a></li>
+        <li><a href="hobbies.html">我的爱好</a></li>
+        <li><a href="album.html">相册展示</a></li>
+        <li><a href="contact.html">联系我</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 主体内容区：使用main语义化标签 -->
+  <main class="main-container">
+    <!-- 主内容区 -->
+    <section class="main-content">
+      <div class="card">
+        <h2>关于我</h2>
+        <div class="profile-intro flex-container">
+          <!-- 显示个人照片 -->
+          <img src="xinruoxizhaopian.jpg"  width="75">
+          <div class="intro-text">
+            <p>热爱生活的创作者，擅长文字表达与视觉设计，致力于用内容传递温度与思考。</p>
+            <p>在忙碌中自洽，最近在准备专业考试的同时，也在探索新的创作方向...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>个人信息</h2>
+        <!-- 个人信息表格：使用table标签 -->
+        <div class="info-table">
+          <table>
+            <tr>
+              <th>姓名</th>
+              <td>信若溪</td>
+            </tr>
+            <tr>
+              <th>性别</th>
+              <td>女</td>
+            </tr>
+            <tr>
+              <th>兴趣爱好</th>
+              <td>阅读、摄影、旅行、插画</td>
+            </tr>
+            <tr>
+              <th>个人标签</th>
+              <td>乐观主义者、终身学习者、生活记录者</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 侧边栏：使用aside语义化标签 -->
+    <aside class="sidebar">
+      <div class="card">
+        <h3>近期动态</h3>
+        <div class="update-item">
+          <p>2025.05.10<br>
+学习内容：学习光圈、快门、ISO 基础知识，了解其对曝光的影响。<br>​
+实践：用手机尝试调整曝光补偿，拍摄同一景物不同明暗效果。​
+          </p>
+        </div>
+        <div class="update-item">
+          <p>2025.05.25<br>
+学习内容：掌握构图法则，重点学习三分构图、对称构图。<br>​
+实践：在公园拍摄风景，用三分构图突出主体，对称构图拍湖面倒影。​
+          </p>
+        </div>
+        <div class="update-item">
+          <p>2025.06.10<br>
+学习内容：研究光线运用，了解顺光、逆光、侧光特点。​<br>
+实践：傍晚拍摄人物，尝试逆光勾勒轮廓，侧光塑造立体感。​
+        </p>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 页脚区：使用footer语义化标签 -->
+  <footer class="footer">
+    <div class="footer-container">
+       <p> 2025 信若溪个人网站 | 联系方式：15503260192 15972081565</p>
+      <div class="footer-links">
+        <a href="#">QQ：3200561631</a>
+        <a href="#">微信：x15503260192</a>
+        <a href="#">小红书：855043163</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

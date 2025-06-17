@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- 设置字符编码 -->
+  <meta charset="UTF-8">
+  <!-- 设置页面在移动设备上的显示方式 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 设置页面标题 -->
+  <title>信若溪 - 联系我</title>
+  <!-- 引入外部样式表 -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 页眉区 -->
+  <header class="header">
+    <div class="header-container">
+      <!-- 显示 logo -->
+      <div class="logo">信若溪 <span>个人网站</span></div>
+      <!-- 导航栏 -->
+      <ul class="nav">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="resume.html">个人简历</a></li>
+        <li><a href="hobbies.html">我的爱好</a></li>
+        <li><a href="album.html">相册展示</a></li>
+        <li><a href="contact.html" class="active">联系我</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- 主体内容区 -->
+  <main class="main-container">
+    <!-- 主内容区 -->
+    <section class="main-content">
+      <div class="card">
+        <h2>给我留言</h2>
+        <!-- 联系表单：使用form标签 -->
+        <form id="contact-form">
+          <!-- 姓名输入框 -->
+          <div class="form-group">
+            <label for="name">姓名</label>
+            <input type="text" id="name" placeholder="请输入你的姓名" required>
+          </div>
+          
+          <!-- 邮箱输入框 -->
+          <div class="form-group">
+            <label for="email">邮箱</label>
+            <input type="email" id="email" placeholder="请输入你的邮箱" required>
+          </div>
+          
+          <!-- 主题输入框 -->
+          <div class="form-group">
+            <label for="subject">主题</label>
+            <input type="text" id="subject" placeholder="留言主题" required>
+          </div>
+          
+          <!-- 留言内容输入框 -->
+          <div class="form-group">
+            <label for="message">留言内容</label>
+            <textarea id="message" rows="8" placeholder="请输入你想对我说的话..." required></textarea>
+          </div>
+          
+          <!-- 提交按钮 -->
+          <button type="submit" class="btn">发送留言</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 侧边栏 -->
+    <aside class="sidebar">
+      <div class="card">
+        <h3>留言须知</h3>
+        <p>感谢你访问我的个人网站并留下宝贵意见！我会定期查看留言并回复，请注意以下事项：</p>
+        <ul>
+          <li>请文明留言，避免使用不当言辞</li>
+          <li>如需合作咨询，请在留言中说明具体事项</li>
+          <li>紧急事项建议通过邮箱或社交媒体私信联系</li>
+        </ul>
+        <p>期待与你交流！</p>
+      </div>
+    </aside>
+  </main>
+
+  <!-- 页脚区 -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p> 2025 信若溪个人网站 | 联系方式：15503260192 15972081565</p>
+      <div class="footer-links">
+        <a href="#">QQ：3200561631</a>
+        <a href="#">微信：x15503260192</a>
+        <a href="#">小红书：855043163</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 获取联系表单元素
+    const contactForm = document.getElementById('contact-form');
+    
+    // 为表单添加提交事件监听器
+    contactForm.addEventListener('submit', (e) => {
+      // 阻止表单默认提交行为
+      e.preventDefault();
+      
+      // 这里可以添加表单验证和提交逻辑
+      // 弹出提示框提示留言已提交
+      alert('留言已提交！感谢你的反馈，我会尽快回复你。');
+      // 重置表单
+      contactForm.reset();
+    });
+  </script>
+</body>
+</html>
